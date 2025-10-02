@@ -3182,7 +3182,7 @@
           "named": true
         },
         {
-          "type": "string_literal",
+          "type": "string_literals",
           "named": true
         },
         {
@@ -3190,7 +3190,7 @@
           "named": true
         },
         {
-          "type": "wide_string_literal",
+          "type": "wide_string_literals",
           "named": true
         }
       ]
@@ -4079,6 +4079,21 @@
     }
   },
   {
+    "type": "string_literals",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "string_type",
     "named": true,
     "fields": {},
@@ -4891,6 +4906,21 @@
         },
         {
           "type": "string_content",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "wide_string_literals",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "wide_string_literal",
           "named": true
         }
       ]

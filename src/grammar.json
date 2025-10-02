@@ -870,11 +870,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "string_literal"
+          "name": "string_literals"
         },
         {
           "type": "SYMBOL",
-          "name": "wide_string_literal"
+          "name": "wide_string_literals"
         },
         {
           "type": "SYMBOL",
@@ -1083,6 +1083,20 @@
             }
           ]
         }
+      }
+    },
+    "string_literals": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "string_literal"
+      }
+    },
+    "wide_string_literals": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "wide_string_literal"
       }
     },
     "string_literal": {

@@ -6,8 +6,9 @@ exports.rules = {
       $.fixed_pt_literal,
       $.char_literal,
       $.wide_character_literal,
-      $.string_literal,
-      $.wide_string_literal,
+      // ROS IDL extension from https://github.com/ros2/rosidl/blob/04bd000e1060d8abe93478a54a63ac96931a1ffa/rosidl_parser/rosidl_parser/grammar.lark#L192-L193
+      $.string_literals,
+      $.wide_string_literals,
       $.boolean_literal,
     ),
   // 7.2.6.1 Integer Literals
@@ -54,6 +55,10 @@ exports.rules = {
         ),
       ),
     ),
+
+  // ROS IDL extension from https://github.com/ros2/rosidl/blob/04bd000e1060d8abe93478a54a63ac96931a1ffa/rosidl_parser/rosidl_parser/grammar.lark#L79-L81
+  string_literals: $ => repeat1($.string_literal),
+  wide_string_literals: $ => repeat1($.wide_string_literal),
 
   string_literal: $ =>
     seq(
