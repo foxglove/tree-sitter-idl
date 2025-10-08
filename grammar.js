@@ -127,7 +127,7 @@ module.exports = grammar({
       ),
     default: $ => seq('default', $.const_expr),
 
-    const_dcl: $ => seq('const', $.const_type, $.identifier, '=', $.const_expr),
+    const_dcl: $ => seq(repeat($.annotation_appl), 'const', $.const_type, $.identifier, '=', $.const_expr),
     const_type: $ =>
       choice(
         $.integer_type,

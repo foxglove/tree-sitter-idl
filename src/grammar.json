@@ -2697,10 +2697,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "annotation_appl_default"
-        },
-        {
-          "type": "SYMBOL",
           "name": "annotation_appl_range"
         },
         {
@@ -2713,10 +2709,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "annotation_appl_unit"
-        },
-        {
-          "type": "SYMBOL",
           "name": "annotation_appl_bit_bound"
         },
         {
@@ -2726,10 +2718,6 @@
         {
           "type": "SYMBOL",
           "name": "annotation_appl_nested"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "annotation_appl_verbatim"
         },
         {
           "type": "SYMBOL",
@@ -7117,6 +7105,13 @@
     "const_dcl": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "annotation_appl"
+          }
+        },
         {
           "type": "STRING",
           "value": "const"

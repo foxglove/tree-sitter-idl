@@ -233,10 +233,6 @@
           "named": true
         },
         {
-          "type": "annotation_appl_default",
-          "named": true
-        },
-        {
           "type": "annotation_appl_default_literal",
           "named": true
         },
@@ -329,15 +325,7 @@
           "named": true
         },
         {
-          "type": "annotation_appl_unit",
-          "named": true
-        },
-        {
           "type": "annotation_appl_value",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_verbatim",
           "named": true
         },
         {
@@ -449,32 +437,6 @@
           "type": "arg_key",
           "named": true
         },
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_default",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
         {
           "type": "const_expr",
           "named": true
@@ -1073,32 +1035,6 @@
     }
   },
   {
-    "type": "annotation_appl_unit",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "annotation_appl_value",
     "named": true,
     "fields": {
@@ -1122,60 +1058,6 @@
           "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "annotation_appl_verbatim",
-    "named": true,
-    "fields": {
-      "language": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "verbatim_language",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      },
-      "placement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "placement_kind",
-            "named": true
-          }
-        ]
-      },
-      "text": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "const_expr",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -1857,6 +1739,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "annotation_appl",
+          "named": true
+        },
         {
           "type": "const_expr",
           "named": true
@@ -3515,11 +3401,6 @@
     }
   },
   {
-    "type": "placement_kind",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "port_body",
     "named": true,
     "fields": {},
@@ -4867,11 +4748,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "verbatim_language",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "wide_character_literal",
