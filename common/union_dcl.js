@@ -3,7 +3,7 @@ const { commaSep } = require('./common');
 exports.rules = {
   enum_dcl: $ =>
     seq('enum', $.identifier, '{', commaSep($.enumerator), optional(','), '}'),
-  enumerator: $ => seq(repeat($.annotation_appl), $.identifier),
+  enumerator: $ => seq(repeat($.annotation_appl), field('name', $.identifier)),
 
   union_dcl: $ => choice($.union_def, $.union_forward_dcl),
   union_forward_dcl: $ => seq('union', $.identifier),

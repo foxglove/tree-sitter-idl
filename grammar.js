@@ -115,17 +115,12 @@ module.exports = grammar({
         '}',
       ),
     member: $ =>
-      prec.left(
-        seq(
-          repeat($.annotation_appl),
-          field('type', $.type_spec),
-          field('identifier', $.declarators),
-          optional($.default),
-          ';',
-          optional($.extend_annotation_appl),
-        ),
+      seq(
+        repeat($.annotation_appl),
+        field('type', $.type_spec),
+        field('identifier', $.declarators),
+        ';',
       ),
-    default: $ => seq('default', $.const_expr),
 
     const_dcl: $ => seq(repeat($.annotation_appl), 'const', $.const_type, $.identifier, '=', $.const_expr),
     const_type: $ =>

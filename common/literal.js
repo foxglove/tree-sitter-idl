@@ -13,11 +13,7 @@ exports.rules = {
     ),
   // 7.2.6.1 Integer Literals
   integer_literal: $ =>
-    seq(
-      optional($.integer_sign),
       choice($.bin_number, $.oct_number, $.dec_number, $.hex_number),
-    ),
-  integer_sign: _ => choice('-', '+'),
   bin_number: _ => /0[bB][01]+/, // extend
   oct_number: _ =>
     choice(
@@ -27,17 +23,44 @@ exports.rules = {
   dec_number: _ => choice('0', /[1-9]\d*/),
   hex_number: _ => /0x[0-9a-fA-F]+/i,
   // 7.2.6.4 Floating-point Literals
-  floating_pt_literal: $ =>
-    seq(
-      optional($.integer_sign),
-      $.dec_number,
-      '.',
-      $.dec_number,
-      optional(/e/i),
-    ),
+  // A floating-point literal consists of an integer part, a decimal point (.), a fraction part, an e or E, and an optionally
+  // signed integer exponent. The integer and fraction parts both consist of a sequence of decimal (base ten) digits. Either
+  // the integer part or the fraction part (but not both) may be missing; either the decimal point or the letter e (or E) and the
+  // exponent (but not both) may be missing.
+  floating_pt_literal: $ => choice(
+    // 1. integer
+    // 2. decimal point
+    // 3. fraction
+    // 4. exponent
+    //
+    // We must not match any string where both 1 and 3 are missing, or both 2
+    // and 4 are missing. Strings where 2 is missing (i.e. no decimal point)
+    // should presumably be treated as also missing 3 (i.e. no fraction part),
+    // so we must not match any string where both 1 and 2 are missing.
+    //
+    // Remaining combinations to consider:
+    //  - all present
+    //  - missing 1
+    //  - missing 3
+    //  - missing 4
+    //  - missing 1 and 4
+    //  - missing 2 and 3
+    //  - missing 3 and 4
+    //
+    // Combine some of these using optionals to get. Correctness can be checked
+    // by going through each combination above and seeing that it falls into at
+    // least one of the patterns below.
+    //
+    // - 1 and 4 both optional
+    /[0-9]*\.[0-9]+((e|E)[+-]?[0-9]+)?/,
+    // - 2 optional; missing 3
+    /[0-9]+\.?(e|E)[+-]?[0-9]+?/,
+    // - missing 3 and 4
+    /[0-9]+\./,
+  ),
   // 7.2.6.5 Fixed-Point Literals
   fixed_pt_literal: $ =>
-    seq(optional($.integer_sign), $.dec_number, '.', $.dec_number, /d/i),
+    seq($.dec_number, '.', $.dec_number, /d/i),
 
   escape_sequence: _ =>
     token(

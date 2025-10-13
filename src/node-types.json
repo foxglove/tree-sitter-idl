@@ -74,805 +74,53 @@
   {
     "type": "annotation_appl",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "annotation_appl_builtin_body",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_custom_body",
-          "named": true
-        },
-        {
-          "type": "extend_annotation_appl",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_ami",
-    "named": true,
     "fields": {
       "name": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "anno_name",
+            "type": "scoped_name",
             "named": true
           }
         ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_appendable",
-    "named": true,
-    "fields": {
-      "name": {
+      },
+      "params": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
-            "type": "anno_name",
+            "type": "annotation_appl_params",
             "named": true
           }
         ]
       }
-    }
-  },
-  {
-    "type": "annotation_appl_autoid",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "autoid_kind",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_bit_bound",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_builtin_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "annotation_appl_ami",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_appendable",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_autoid",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_bit_bound",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_choice",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_data_representation",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_dds_reply_topic",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_dds_request_topic",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_dds_service",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_default_literal",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_default_nested",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_empty",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_extensibility",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_external",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_final",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_hashid",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_id",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_ignore_literal_names",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_key",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_max",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_min",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_must_understand",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_mutable",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_nested",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_non_serialized",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_oneway",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_optional",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_position",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_range",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_service",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_topic",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_try_construct",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_value",
-          "named": true
-        },
-        {
-          "type": "data_representation_mask",
-          "named": true
-        },
-        {
-          "type": "try_construct_fail_action",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_custom_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "annotation_appl_params",
-          "named": true
-        },
-        {
-          "type": "scoped_name",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_data_representation",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "data_representation_mask",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_dds_reply_topic",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "arg_key",
-          "named": true
-        },
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_dds_request_topic",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "arg_key",
-          "named": true
-        },
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_default_literal",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "annotation_appl_default_nested",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_extensibility",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "extensibility_kind",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_external",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_final",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "annotation_appl_hashid",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_id",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "integer_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_ignore_literal_names",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_key",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_max",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_min",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_must_understand",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_mutable",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "annotation_appl_nested",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_non_serialized",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "boolean_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_oneway",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_optional",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
     }
   },
   {
     "type": "annotation_appl_param",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "const_expr",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        }
-      ]
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "const_expr",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -887,172 +135,6 @@
           "type": "annotation_appl_param",
           "named": true
         },
-        {
-          "type": "const_expr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_position",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_range",
-    "named": true,
-    "fields": {
-      "max": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "max_expr",
-            "named": true
-          }
-        ]
-      },
-      "min": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "min_expr",
-            "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "annotation_appl_service",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "service_platform",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_topic",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "const_expr",
-            "named": true
-          }
-        ]
-      },
-      "platform": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "topic_platform",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "annotation_appl_try_construct",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "try_construct_fail_action",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "annotation_appl_value",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "anno_name",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
         {
           "type": "const_expr",
           "named": true
@@ -1298,11 +380,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "autoid_kind",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "base_type_spec",
@@ -1894,11 +971,6 @@
     }
   },
   {
-    "type": "data_representation_mask",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "dec_number",
     "named": true,
     "fields": {}
@@ -1932,21 +1004,6 @@
       "types": [
         {
           "type": "declarator",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "default",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "const_expr",
           "named": true
         }
       ]
@@ -2134,17 +1191,24 @@
   {
     "type": "enumerator",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "annotation_appl",
-          "named": true
-        },
-        {
-          "type": "identifier",
           "named": true
         }
       ]
@@ -2335,34 +1399,6 @@
     }
   },
   {
-    "type": "extend_annotation_appl",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "annotation_appl",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_builtin_body",
-          "named": true
-        },
-        {
-          "type": "annotation_appl_custom_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "extensibility_kind",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "factory_dcl",
     "named": true,
     "fields": {},
@@ -2473,10 +1509,6 @@
         {
           "type": "dec_number",
           "named": true
-        },
-        {
-          "type": "integer_sign",
-          "named": true
         }
       ]
     }
@@ -2499,21 +1531,7 @@
   {
     "type": "floating_pt_literal",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "dec_number",
-          "named": true
-        },
-        {
-          "type": "integer_sign",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "floating_pt_type",
@@ -2840,7 +1858,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -2856,20 +1874,11 @@
           "named": true
         },
         {
-          "type": "integer_sign",
-          "named": true
-        },
-        {
           "type": "oct_number",
           "named": true
         }
       ]
     }
-  },
-  {
-    "type": "integer_sign",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "integer_type",
@@ -3102,25 +2111,6 @@
     }
   },
   {
-    "type": "max_expr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        },
-        {
-          "type": "range_kind",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "member",
     "named": true,
     "fields": {
@@ -3151,33 +2141,6 @@
       "types": [
         {
           "type": "annotation_appl",
-          "named": true
-        },
-        {
-          "type": "default",
-          "named": true
-        },
-        {
-          "type": "extend_annotation_appl",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "min_expr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "positive_int_const",
-          "named": true
-        },
-        {
-          "type": "range_kind",
           "named": true
         }
       ]
@@ -3791,11 +2754,6 @@
     }
   },
   {
-    "type": "service_platform",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "set_excep_expr",
     "named": true,
     "fields": {},
@@ -4219,11 +3177,6 @@
     }
   },
   {
-    "type": "topic_platform",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "tpl_definition",
     "named": true,
     "fields": {},
@@ -4241,11 +3194,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "try_construct_fail_action",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "type_dcl",
@@ -4897,10 +3845,6 @@
     "named": false
   },
   {
-    "type": "//@",
-    "named": false
-  },
-  {
     "type": "0",
     "named": false
   },
@@ -4981,32 +3925,8 @@
     "named": false
   },
   {
-    "type": "allowed_kinds",
-    "named": false
-  },
-  {
-    "type": "anno_name",
-    "named": true
-  },
-  {
-    "type": "annotation_appl_choice",
-    "named": true
-  },
-  {
-    "type": "annotation_appl_dds_service",
-    "named": true
-  },
-  {
-    "type": "annotation_appl_empty",
-    "named": true
-  },
-  {
     "type": "any",
     "named": false
-  },
-  {
-    "type": "arg_key",
-    "named": true
   },
   {
     "type": "args",
@@ -5255,10 +4175,6 @@
   {
     "type": "raises",
     "named": false
-  },
-  {
-    "type": "range_kind",
-    "named": true
   },
   {
     "type": "readonly",
